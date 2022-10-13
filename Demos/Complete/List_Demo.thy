@@ -6,6 +6,7 @@ datatype 'a list = Nil | Cons "'a" "'a list"
 
 term "Nil"
 
+(* In this special situation: *)
 declare [[names_short]]
 
 fun app :: "'a list \<Rightarrow> 'a list \<Rightarrow> 'a list" where
