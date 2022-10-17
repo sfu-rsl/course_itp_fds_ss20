@@ -33,15 +33,15 @@ apply(induction rule: ev.induct)
 
 done
 
-text \<open>An induction on the computation of evn:\<close>
+text \<open>An induction on the computation of @{const evn}:\<close>
 
 lemma "evn n \<Longrightarrow> ev n"
 apply(induction n rule: evn.induct)
 
 done
 
-text \<open>No problem with termination because the premises are always smaller
-than the conclusion:\<close>
+text \<open>No problem with termination
+because the premises are always smaller than the conclusion:\<close>
 
 declare ev.intros[simp,intro]
 
@@ -52,7 +52,7 @@ apply(induction n rule: evn.induct)
 apply(simp_all)
 done
 
-text \<open>The power of arith:\<close>
+text \<open>The power of "arith":\<close>
 
 lemma "ev n \<Longrightarrow> \<exists>k. n = 2*k"
 apply(induction rule: ev.induct)

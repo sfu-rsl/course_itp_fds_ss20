@@ -61,7 +61,7 @@ text \<open>The power of "arith":\<close>
 
 lemma "ev n \<Longrightarrow> \<exists>k. n = 2*k"
 apply(induction rule: ev.induct)
- apply(simp)
+ apply simp
 apply arith
 done
 
