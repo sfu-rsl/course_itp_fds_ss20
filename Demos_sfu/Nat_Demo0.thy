@@ -5,7 +5,7 @@
 
 section \<open>Example\<close>
 
-theory Nat_Demo
+theory Nat_Demo0
   imports Main \<comment> \<open>Besides \<^verbatim>\<open>Main\<close>, \<^verbatim>\<open>Pure\<close> is the minimal theory that can be imported.\<close>
 begin
 

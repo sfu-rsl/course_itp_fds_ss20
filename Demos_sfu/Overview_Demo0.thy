@@ -5,7 +5,7 @@
 
 section \<open>Example\<close>
 
-theory Overview_Demo
+theory Overview_Demo0
 imports Main \<comment> \<open>\<^verbatim>\<open>Main\<close> is a kind of synonym to load Higher-Order Logic (HOL) libraries\<close>
 begin
 
