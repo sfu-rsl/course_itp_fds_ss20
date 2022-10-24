@@ -2,10 +2,13 @@
  * SPDX-License-Identifier
  * Copyright (C) 2021-2022 Simon Fraser University (www.sfu.ca)
  *)
+(*
+ * Tobias Nipkow and Gerwin Klein --- Concrete Semantics (concrete-semantics.org)
+ *)
 
 section \<open>Example\<close>
 
-theory Overview_Demo0
+theory Overview_Demo0 \<comment> \<open>Analogous to \<^file>\<open>../Demos/Overview_Demo.thy\<close>\<close>
 imports Main \<comment> \<open>\<^verbatim>\<open>Main\<close> is a kind of synonym to load Higher-Order Logic (HOL) libraries\<close>
 begin
 

@@ -2,10 +2,13 @@
  * SPDX-License-Identifier
  * Copyright (C) 2021-2022 Simon Fraser University (www.sfu.ca)
  *)
+(*
+ * Tobias Nipkow and Gerwin Klein --- Concrete Semantics (concrete-semantics.org)
+ *)
 
 section \<open>Example\<close>
 
-theory Nat_Demo0
+theory Nat_Demo0 \<comment> \<open>Analogous to \<^file>\<open>../Demos/Nat_Demo.thy\<close>\<close>
   imports Main \<comment> \<open>Besides \<^verbatim>\<open>Main\<close>, \<^verbatim>\<open>Pure\<close> is the minimal theory that can be imported.\<close>
 begin
 
@@ -62,5 +65,30 @@ Note: the equation
 the definition of \<^const>\<open>add\<close>, making this evaluation
 fails: \<^cancel>\<open>value "add 2 3"\<close>.
 \<close>
+
+subsection \<open>Semantics of a HOL term (e.g. \<^term>\<open>case m of _ \<Rightarrow> n\<close> construction)\<close>
+
+fun add0 where
+   "add0 m n = (case m of 0 \<Rightarrow> n
+                        | Suc m \<Rightarrow> Suc (add0 m n))"
+
+lemma "add m n = add0 m n"
+  oops
+
+subsection \<open>Semantics of \<^theory_text>\<open>lemma\<close>\<close>
+
+lemma add_02: "add m 0 = m"
+  apply(induction m)
+   defer
+  prefer 2
+   apply(auto)
+  oops
+
+lemma "0 = 0"
+  apply auto
+  done
+
+lemma add_02: "add m 1 = m + 1"
+  oops
 
 end
